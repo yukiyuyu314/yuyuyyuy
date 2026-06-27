@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+
+<title>GOSHUIN COLLECTION</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Cormorant Garamond', serif;
+background:#f5f5f5;
+}
+
+/* ヘッダー */
+
+.header{
+background:white;
+text-align:center;
+padding:60px 20px;
+}
+
+.site-title{
+font-size:60px;
+font-weight:300;
+letter-spacing:10px;
+margin:0;
+}
+
+.sub-title{
+letter-spacing:4px;
+color:#888;
+}
+
+/* メニュー */
+
+.tab-menu{
+position:sticky;
+top:0;
+background:white;
+display:flex;
+justify-content:center;
+gap:40px;
+padding:20px;
+border-top:1px solid #ddd;
+border-bottom:1px solid #ddd;
+z-index:999;
+}
+
+.tab-menu a{
+text-decoration:none;
+color:#222;
+letter-spacing:2px;
+}
+
+.tab-menu a:hover{
+color:#c89b3c;
+}
+
+/* タイトル */
+
+.section-title{
+text-align:center;
+font-size:45px;
+font-weight:300;
+letter-spacing:5px;
+margin-top:80px;
+}
+
+.line{
+width:80px;
+height:2px;
+background:#222;
+margin:20px auto 60px;
+}
+
+/* 横スクロール */
+
+.goshuin-list{
+display:flex;
+gap:30px;
+overflow-x:auto;
+padding:20px 80px 80px;
+}
+
+.goshuin-list::-webkit-scrollbar{
+height:10px;
+}
+
+.goshuin-list::-webkit-scrollbar-thumb{
+background:#c89b3c;
+border-radius:20px;
+}
+
+/* カード */
+
+.goshuin-item{
+
+min-width:320px;
+
+background:white;
+
+border-radius:20px;
+
+padding:20px;
+
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+flex-shrink:0;
+
+text-align:center;
+}
+
+.goshuin-item img{
+
+width:100%;
+
+height:320px;
+
+object-fit:contain;
+
+background:white;
+
+border-radius:10px;
+}
+
+.goshuin-item h3{
+
+margin-top:20px;
+
+font-size:28px;
+}
+
+.roman{
+
+color:#888;
+
+letter-spacing:3px;
+
+font-size:12px;
+}
+
+.goshuin-item:hover{
+
+transform:translateY(-5px);
+
+transition:0.3s;
+}
+
+/* フッター */
+
+.footer{
+
+background:#111;
+
+color:white;
+
+text-align:center;
+
+padding:60px 20px;
+
+margin-top:50px;
+}
+
+.menu-btn{
+display:none;
+}
+
+/* スマホ */
+
+@media screen and (max-width:768px){
+
+.menu-btn{
+
+display:block;
+
+position:fixed;
+
+top:20px;
+
+right:20px;
+
+z-index:1001;
+
+background:white;
+
+color:#222;
+
+padding:10px 15px;
+
+border:1px solid #ddd;
+
+font-size:14px;
+
+letter-spacing:3px;
+
+cursor:pointer;
+
+}
+
+.tab-menu{
+
+display:none;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:flex-start;
+
+position:fixed;
+
+top:0;
+
+right:0;
+
+width:250px;
+
+height:100vh;
+
+background:white;
+
+padding-top:100px;
+
+gap:30px;
+
+box-shadow:-5px 0 15px rgba(0,0,0,0.1);
+
+}
+
+.tab-menu.show{
+
+display:flex;
+
+}
+
+.site-title{
+
+font-size:35px;
+
+letter-spacing:5px;
+
+}
+
+.section-title{
+
+font-size:28px;
+
+}
+
+.goshuin-list{
+
+padding:20px;
+
+}
+
+.goshuin-item{
+
+min-width:250px;
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="menu-btn" onclick="toggleMenu()"></div>    
+
+<header class="header">
+
+<h1 class="site-title">
+GOSHUIN COLLECTION
+</h1>
+
+<p class="sub-title">
+SACRED STAMPS FROM JAPAN
+</p>
+
+</header>
+
+<div class="menu-btn" onclick="toggleMenu()">
+MENU
+</div>
+
+<nav class="tab-menu" id="menu">
+
+<a href="index.html.html">TOP</a>
+
+<a href="history.html">HISTORY</a>
+
+<a href="place.html">LOCATION</a>
+
+<a href="about.html">ABOUT</a>
+
+</nav>
+
+<h2 class="section-title">
+GOSHUIN
+</h2>
+
+<div class="line"></div>
+
+<div class="goshuin-list">
+
+<div class="goshuin-item">
+<img src="images/hajikami.jpg">
+<h3>波自加彌神社</h3>
+<p class="roman">HAJIKAMI SHRINE</p>
+</div>
+
+<div class="goshuin-item">
+<img src="images/zenkoji.jpg">
+<h3>善光寺</h3>
+<p class="roman">ZENKOJI TEMPLE</p>
+</div>
+
+<div class="goshuin-item">
+<img src="images/kawanakajima.jpg">
+<h3>川中島古戦場八幡社</h3>
+<p class="roman">KAWANAKAJIMA HACHIMAN SHRINE</p>
+</div>
+
+<div class="goshuin-item">
+<img src="images/yasue.jpg">
+<h3>安江八幡宮</h3>
+<p class="roman">YASUE HACHIMANGU SHRINE</p>
+</div>
+
+<div class="goshuin-item">
+<img src="images/uji.jpg">
+<h3>宇治神社</h3>
+<p class="roman">UJI SHRINE</p>
+</div>
+
+<div class="goshuin-item">
+<img src="images/natadera.jpg">
+<h3>那谷寺</h3>
+<p class="roman">NATADERA TEMPLE</p>
+</div>
+
+</div>
+
+<footer class="footer">
+
+    <img src="images/footer-logo.png" alt="logo" class="footer-logo">
+
+<p>
+おすすめ御朱印まとめ
+</p>
+
+<p>
+Discover Japanese Culture Through Goshuin
+</p>
+
+</footer>
+
+<script>
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("show");
+}
+
+</script>
+
+</body>
+
+</html>

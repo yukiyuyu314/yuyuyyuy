@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LOCATION</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Cormorant Garamond',serif;
+background:#f5f5f5;
+}
+
+/* MENU */
+
+.menu-btn{
+display:none;
+}
+
+/* HEADER */
+
+.header{
+background:white;
+text-align:center;
+padding:60px 20px;
+}
+
+.site-title{
+font-size:60px;
+font-weight:300;
+letter-spacing:10px;
+margin:0;
+}
+
+.sub-title{
+color:#888;
+letter-spacing:4px;
+margin-top:10px;
+}
+
+/* NAV */
+
+.tab-menu{
+position:sticky;
+top:0;
+background:white;
+display:flex;
+justify-content:center;
+gap:40px;
+padding:20px;
+border-top:1px solid #ddd;
+border-bottom:1px solid #ddd;
+z-index:999;
+}
+
+.tab-menu a{
+text-decoration:none;
+color:#222;
+letter-spacing:2px;
+}
+
+.tab-menu a:hover{
+color:#c89b3c;
+}
+
+/* TITLE */
+
+.section-title{
+text-align:center;
+font-size:45px;
+font-weight:300;
+letter-spacing:5px;
+margin-top:80px;
+}
+
+.line{
+width:80px;
+height:2px;
+background:#222;
+margin:20px auto 60px;
+}
+
+/* MAP */
+
+.map-area{
+width:90%;
+margin:0 auto 80px;
+}
+
+.map-area iframe{
+width:100%;
+height:500px;
+border:none;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* GRID */
+
+.place-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+width:90%;
+margin:0 auto 80px;
+}
+
+/* CARD */
+
+.place-box{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.place-box:hover{
+transform:translateY(-5px);
+}
+
+.place-box h2{
+margin-bottom:5px;
+font-size:28px;
+}
+
+.roman{
+color:#888;
+font-size:12px;
+letter-spacing:3px;
+margin-bottom:20px;
+}
+
+.place-box p{
+line-height:1.8;
+}
+
+/* FOOTER */
+
+.footer{
+background:#111;
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+.footer-logo{
+width:120px;
+margin-bottom:20px;
+}
+
+.menu-btn{
+display:none;
+}
+
+/* SMARTPHONE */
+
+@media screen and (max-width:768px){
+
+.menu-btn{
+display:block;
+position:fixed;
+top:20px;
+right:20px;
+z-index:1001;
+background:white;
+padding:10px 15px;
+border:1px solid #ddd;
+font-size:14px;
+letter-spacing:3px;
+cursor:pointer;
+}
+
+.tab-menu{
+display:none;
+flex-direction:column;
+justify-content:flex-start;
+align-items:center;
+position:fixed;
+top:0;
+right:0;
+width:250px;
+height:100vh;
+background:white;
+padding-top:100px;
+gap:30px;
+box-shadow:-5px 0 15px rgba(0,0,0,0.1);
+}
+
+.tab-menu.show{
+display:flex;
+}
+
+.site-title{
+font-size:34px;
+letter-spacing:5px;
+}
+
+.sub-title{
+font-size:12px;
+}
+
+.section-title{
+font-size:28px;
+}
+
+.place-grid{
+grid-template-columns:1fr;
+}
+
+.map-area iframe{
+height:300px;
+}
+
+.place-box{
+padding:20px;
+}
+
+.place-box h2{
+font-size:22px;
+}
+
+.footer-logo{
+width:80px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="menu-btn" onclick="toggleMenu()">
+MENU
+</div>
+
+<header class="header">
+
+<h1 class="site-title">
+LOCATION
+</h1>
+
+<p class="sub-title">
+VISIT THESE SHRINES AND TEMPLES
+</p>
+
+</header>
+
+<nav class="tab-menu" id="menu">
+
+<a href="index.html.html">TOP</a>
+
+<a href="goshuin.html">GOSHUIN</a>
+
+<a href="history.html">HISTORY</a>
+
+<a href="about.html">ABOUT</a>
+
+</nav>
+
+<h2 class="section-title">
+MAP
+</h2>
+
+<div class="line"></div>
+
+<div class="map-area">
+
+<iframe src="https://www.google.com/maps/d/u/2/embed?mid=1d5IgYwaEGSV_lNv02OeEgrMRQUhwWmg&ehbc=2E312F">
+</iframe>
+
+</div>
+
+<div class="place-grid">
+
+<div class="place-box">
+<h2>波自加彌神社</h2>
+<p class="roman">HAJIKAMI SHRINE</p>
+<p>石川県金沢市二日市町ハ165番地</p>
+</div>
+
+<div class="place-box">
+<h2>善光寺</h2>
+<p class="roman">ZENKOJI TEMPLE</p>
+<p>長野県長野市元善町491-イ</p>
+</div>
+
+<div class="place-box">
+<h2>川中島古戦場八幡社</h2>
+<p class="roman">KAWANAKAJIMA HACHIMAN SHRINE</p>
+<p>長野県長野市小島田町1384-1</p>
+</div>
+
+<div class="place-box">
+<h2>安江八幡宮</h2>
+<p class="roman">YASUE HACHIMANGU SHRINE</p>
+<p>石川県金沢市此花町11-27</p>
+</div>
+
+<div class="place-box">
+<h2>宇治神社</h2>
+<p class="roman">UJI SHRINE</p>
+<p>京都府宇治市宇治さわらびの道</p>
+</div>
+
+<div class="place-box">
+<h2>那谷寺</h2>
+<p class="roman">NATADERA TEMPLE</p>
+<p>石川県小松市那谷町ユ122</p>
+</div>
+
+</div>
+
+<footer class="footer">
+
+<img src="images/footer-logo.png"
+alt="logo"
+class="footer-logo">
+
+<p>おすすめ御朱印まとめ</p>
+
+<p>Discover Japanese Culture Through Goshuin</p>
+
+</footer>
+
+<script>
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("show");
+}
+
+</script>
+
+</body>
+
+</html>

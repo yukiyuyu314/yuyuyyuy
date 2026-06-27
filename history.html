@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+
+<title>HISTORY</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Cormorant Garamond',serif;
+background:#f5f5f5;
+}
+
+/* MENU */
+
+.menu-btn{
+display:none;
+}
+
+/* ヘッダー */
+
+.header{
+background:white;
+padding:60px 20px;
+text-align:center;
+}
+
+.site-title{
+font-size:60px;
+font-weight:300;
+letter-spacing:10px;
+margin:0;
+}
+
+.sub-title{
+letter-spacing:4px;
+color:#888;
+margin-top:10px;
+}
+
+/* ナビ */
+
+.tab-menu{
+position:sticky;
+top:0;
+background:white;
+display:flex;
+justify-content:center;
+gap:40px;
+padding:20px;
+border-top:1px solid #ddd;
+border-bottom:1px solid #ddd;
+z-index:999;
+}
+
+.tab-menu a{
+text-decoration:none;
+color:#222;
+letter-spacing:2px;
+}
+
+.tab-menu a:hover{
+color:#c89b3c;
+}
+
+/* タイトル */
+
+.section-title{
+text-align:center;
+font-size:45px;
+font-weight:300;
+letter-spacing:5px;
+margin-top:80px;
+}
+
+.line{
+width:80px;
+height:2px;
+background:#222;
+margin:20px auto 60px;
+}
+
+/* Grid */
+
+.history-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:40px;
+width:90%;
+margin:0 auto 80px;
+}
+
+/* カード */
+
+.history-box{
+background:white;
+padding:20px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.history-box:hover{
+transform:translateY(-5px);
+}
+
+.history-box:nth-child(odd){
+rotate:-2deg;
+}
+
+.history-box:nth-child(even){
+rotate:2deg;
+}
+
+.image-area{
+position:relative;
+}
+
+.history-box img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:15px;
+}
+
+.english-name{
+position:absolute;
+right:10px;
+top:10px;
+writing-mode:vertical-rl;
+background:rgba(255,255,255,0.85);
+padding:8px;
+font-size:12px;
+letter-spacing:2px;
+font-weight:bold;
+}
+
+/* 文字 */
+
+.history-box h2{
+text-align:center;
+font-size:28px;
+margin-top:20px;
+margin-bottom:10px;
+}
+
+.history-box p{
+line-height:1.8;
+}
+
+/* フッター */
+
+.footer{
+background:#111;
+color:white;
+text-align:center;
+padding:60px 20px;
+margin-top:50px;
+}
+
+.footer-logo{
+width:120px;
+margin-bottom:20px;
+}
+
+.menu-btn{
+display:none;
+}
+
+/* スマホ */
+
+@media screen and (max-width:768px){
+
+.menu-btn{
+
+display:block;
+
+position:fixed;
+
+top:20px;
+
+right:20px;
+
+z-index:1001;
+
+background:white;
+
+color:#222;
+
+padding:10px 15px;
+
+border:1px solid #ddd;
+
+font-size:14px;
+
+letter-spacing:3px;
+
+cursor:pointer;
+
+}
+
+.tab-menu{
+
+display:none;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:flex-start;
+
+position:fixed;
+
+top:0;
+
+right:0;
+
+width:250px;
+
+height:100vh;
+
+background:white;
+
+padding-top:100px;
+
+gap:30px;
+
+box-shadow:-5px 0 15px rgba(0,0,0,0.1);
+
+}
+
+.tab-menu.show{
+
+display:flex;
+
+}
+
+.site-title{
+
+font-size:35px;
+
+letter-spacing:5px;
+
+}
+
+.section-title{
+
+font-size:28px;
+
+}
+
+.history-grid{
+grid-template-columns:1fr;
+width:90%;
+gap:30px;
+}
+
+.goshuin-list{
+
+padding:20px;
+
+}
+
+.goshuin-item{
+
+min-width:250px;
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+ <div class="menu-btn" onclick="toggleMenu()">
+MENU
+</div>   
+
+<header class="header">
+
+<h1 class="site-title">
+HISTORY
+</h1>
+
+<p class="sub-title">
+HISTORY OF SHRINES AND TEMPLES
+</p>
+
+</header>
+
+<nav class="tab-menu" id="menu">
+
+<a href="index.html.html">TOP</a>
+
+<a href="goshuin.html">GOSHUIN</a>
+
+<a href="place.html">LOCATION</a>
+
+<a href="about.html">ABOUT</a>
+
+</nav>
+
+<h2 class="section-title">
+SHRINE HISTORY
+</h2>
+
+<div class="line"></div>
+
+<div class="history-grid">
+
+<div class="history-box">
+
+<div class="image-area">
+
+<img src="images/haru.jpg">
+
+<div class="english-name">
+HAJIKAMI
+</div>
+
+</div>
+
+<h2>
+波自加彌神社
+</h2>
+
+<p>
+石川県金沢市にある神社。日本で唯一、香辛料の神様を祀る神社として知られています。
+</p>
+
+</div>
+
+<div class="history-box">
+
+<div class="image-area">
+
+<img src="images/zenzen.jpg">
+
+<div class="english-name">
+ZENKOJI
+</div>
+
+</div>
+
+<h2>
+善光寺
+</h2>
+
+<p>
+約1400年の歴史を持つ寺院。「一生に一度は善光寺参り」と言われています。
+</p>
+
+</div>
+
+<div class="history-box">
+
+<div class="image-area">
+
+<img src="images/kawawa.jpg">
+
+<div class="english-name">
+KAWANAKAJIMA
+</div>
+
+</div>
+
+<h2>
+川中島古戦場八幡社
+</h2>
+
+<p>
+武田信玄と上杉謙信が戦った川中島に鎮座する神社です。
+</p>
+
+</div>
+
+<div class="history-box">
+
+<div class="image-area">
+
+<img src="images/yayaya.jpg">
+
+<div class="english-name">
+YASUE HACHIMANGU
+</div>
+
+</div>
+
+<h2>
+安江八幡宮
+</h2>
+
+<p>
+応神天皇・神功皇后・玉依姫命を祀る神社。安産祈願で有名です。
+</p>
+
+</div>
+
+<div class="history-box">
+
+<div class="image-area">
+
+<img src="images/uuuu.jpg">
+
+<div class="english-name">
+UJI SHRINE
+</div>
+
+</div>
+
+<h2>
+宇治神社
+</h2>
+
+<p>
+学業成就や安産祈願で知られる歴史ある神社です。
+</p>
+
+</div>
+
+<div class="history-box">
+
+<div class="image-area">
+
+<img src="images/nanana.jpg">
+
+<div class="english-name">
+NATADERA
+</div>
+
+</div>
+
+<h2>
+那谷寺
+</h2>
+
+<p>
+白山信仰と深く関わる寺院で、紅葉の名所として有名です。
+</p>
+
+</div>
+
+</div>
+
+<footer class="footer">
+
+<img src="images/footer-logo.png"
+alt="logo"
+class="footer-logo">
+
+<p>
+おすすめ御朱印まとめ
+</p>
+
+<p>
+Discover Japanese Culture Through Goshuin
+</p>
+
+</footer>
+
+<script>
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("show");
+}
+
+</script>
+
+
+</body>
+
+</html>
